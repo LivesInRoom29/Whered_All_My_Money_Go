@@ -4,9 +4,13 @@
   "description": "A progressive web application that allows the user to track their spending and balance when connected to the internet or not.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "lite-server"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "npm run build && node server.js",
+    "start:dev": "concurrently \"npm run server\" \"cd public && npm run start\"",
+    "server": "nodemon server.js --ignore public",
+    "build": "cd public && npm run build",
+    "install": "cd public && npm install",
+    "public": "cd public && npm start"
   },
   "repository": {
     "type": "git",
@@ -28,8 +32,12 @@
     "compression": "^1.7.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "lite-server": "^2.5.4",
-    "mongoose": "^5.10.9",
-    "morgan": "^1.10.0"
+    "if-env": "^1.0.4",
+    "mongoose": "^5.5.15",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
   }
 }
