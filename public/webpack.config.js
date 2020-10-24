@@ -3,13 +3,14 @@ const path = require('path');
 
 const config = {
   entry: {
-    app: './public/index.js',
+    app: path.resolve( __dirname + '/index.js'),
   },
   output: {
     path: __dirname + '/dist',
     filename: '[name].bundle.js',
   },
   mode: 'development',
+  // Babel
   module: {
     rules: [
       {
@@ -24,6 +25,7 @@ const config = {
       },
     ],
   },
+  // To create the manifest
   plugins: [
     new WebpackPwaManifest({
       fingerprints: false,
@@ -35,8 +37,8 @@ const config = {
       start_url: '/',
       icons: [
         {
-          src: path.resolve('public/icons/icon-512x512.png'),
-          sizes: [96, 128, 192, 256, 384, 512],
+          src: path.resolve( __dirname + '/icons/icon-512x512.png'),
+          sizes: [192, 512],
           destination: path.join('assets', 'icons'),
         },
       ],
