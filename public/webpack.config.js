@@ -3,11 +3,11 @@ const path = require('path');
 
 const config = {
   entry: {
-    app: path.resolve( __dirname + '/index.js'),
+    app: path.resolve('./index.js'),
   },
   output: {
     path: __dirname + '/dist',
-    filename: '[name].bundle.js',
+    filename: 'bundle.js',
   },
   mode: 'development',
   // Babel
@@ -38,7 +38,7 @@ const config = {
       icons: [
         {
           src: path.resolve( __dirname + '/icons/icon-512x512.png'),
-          sizes: [192, 512],
+          sizes: [96, 128, 192, 256, 384, 512],
           destination: path.join('assets', 'icons'),
         },
       ],
