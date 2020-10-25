@@ -10,8 +10,9 @@
     "server": "nodemon server.js --ignore public",
     "build": "cd public && npm run build",
     "install": "cd public && npm install",
-    "public": "cd public && npm start"
-  },
+    "public": "cd public && npm start",
+    "heroku-prebuild": "cd public && npm install --dev"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LivesInRoom29/Whered_All_My_Money_Go.git"
