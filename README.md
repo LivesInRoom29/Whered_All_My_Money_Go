@@ -6,7 +6,7 @@
 A progressive web application that allows the user to track their spending and balance whether connected to the internet or not. If the user goes offline, they can still track their expenses and income. When they go back online the database will be updated.
 
 
-[Link to Deployed Project](linktocome.com)
+[Link to Deployed Project](https://whered-my-money-go.herokuapp.com/)
 
 
 ## Table of Contents
@@ -14,9 +14,8 @@ A progressive web application that allows the user to track their spending and b
 2. [Usage](#usage)
 3. [License](#license)
 4. [Contributing](#contributing)
-5. [Tests](#tests)
-6. [Questions](#questions)
-7. [Credits](#credits)
+5. [Questions](#questions)
+6. [Credits](#credits)
 
 
 ## Installation
@@ -27,8 +26,7 @@ npm install
 
 
 ## Usage
-Instructions for using...
-
+Simply type in a name or description for your transaction and select whether it will add to your account (a deposit) or subtract from your account (a withdrawal). The application will keep a running tally of all transactions and display a line graph showing your balance over time. If you lose connection to the internet, you can continue to use the application. Any data submitted while offline will be saved in local storage and will be submitted to the database once you get a connection back.
 
 
 ## License
@@ -36,14 +34,7 @@ This project is licensed under the **unlicense** license.
 
 
 ## Contributing
-contirbute by...
-
-
-## Tests
-In order to run tests on the project, in the console run:
-```
-no tests
-```
+Feel free to open an issue or send me an email if you'd like to work on this.
 
 
 ## Questions
